@@ -7,7 +7,7 @@
 // ════════════════════════════════════════════════
 // 🔐 MOT DE PASSE
 // ════════════════════════════════════════════════
-const SECRET_PASSWORD = "memoires";
+const SECRET_PASSWORD = "alphaP";
 
 const PHOTOS = [
   'memories1.jpeg',
