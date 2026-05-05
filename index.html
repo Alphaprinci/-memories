@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mes Mémoires — une collection d'instants précieux">
+  <meta property="og:title" content="Mes Mémoires">
+  <meta property="og:description" content="Quatre instants · une âme">
+  <meta name="theme-color" content="#120e0e">
+  <title>Mes Mémoires</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ÉCRAN D'ACCUEIL AVEC MOT DE PASSE -->
+  <div id="welcome" role="dialog" aria-modal="true">
+    <div class="wlc-line" aria-hidden="true"></div>
+    <p class="wlc-pre">accès privé</p>
+    <h1 class="wlc-title">Mes Mémoires</h1>
+    <p class="wlc-sub">quatre instants · une âme</p>
+    
+    <div class="password-container">
+      <input type="password" id="password-input" class="password-input" placeholder="mot de passe" autocomplete="off">
+      <button class="wlc-btn" id="enter-btn">✦ &nbsp; Entrer &nbsp; ✦</button>
+    </div>
+    <p id="password-error" class="password-error"></p>
+    
+    <p class="wlc-note">🎵 musique incluse</p>
+  </div>
+
+  <!-- PÉTALES FLOTTANTS -->
+  <div id="petals" aria-hidden="true">
+    <span class="petal" style="left:5%;animation-duration:10s;animation-delay:0s">🌸</span>
+    <span class="petal" style="left:18%;animation-duration:14s;animation-delay:2.5s">✿</span>
+    <span class="petal" style="left:35%;animation-duration:9s;animation-delay:5s">🌸</span>
+    <span class="petal" style="left:56%;animation-duration:12s;animation-delay:1s">✿</span>
+    <span class="petal" style="left:72%;animation-duration:11s;animation-delay:4s">🌸</span>
+    <span class="petal" style="left:88%;animation-duration:8s;animation-delay:6.5s">✿</span>
+    <span class="petal" style="left:43%;animation-duration:15s;animation-delay:8s">🌸</span>
+  </div>
+
+  <header>
+    <p class="eyebrow">Collection privée &nbsp;·&nbsp; 4 instants</p>
+    <h2 class="page-title">Mes Mémoires</h2>
+    <p class="subtitle">quatre moments · une histoire · moi</p>
+  </header>
+
+  <main>
+    <div class="gallery" id="gallery">
+
+      <div class="photo-wrap" id="wrap-0" tabindex="0" aria-label="Photo 1">
+        <div class="placeholder" id="ph-0" aria-hidden="true">
+          <div class="ph-ring"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="overlay"><span class="overlay-text">Un matin de lumière douce…</span></div>
+      </div>
+
+      <div class="photo-wrap" id="wrap-1" tabindex="0" aria-label="Photo 2">
+        <div class="placeholder" id="ph-1" aria-hidden="true">
+          <div class="ph-ring"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="overlay"><span class="overlay-text">Dans mes meilleurs jours…</span></div>
+      </div>
+
+      <div class="photo-wrap" id="wrap-2" tabindex="0" aria-label="Photo 3">
+        <div class="placeholder" id="ph-2" aria-hidden="true">
+          <div class="ph-ring"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="overlay"><span class="overlay-text">Un instant suspendu…</span></div>
+      </div>
+
+      <div class="photo-wrap" id="wrap-3" tabindex="0" aria-label="Photo 4">
+        <div class="placeholder" id="ph-3" aria-hidden="true">
+          <div class="ph-ring"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="overlay"><span class="overlay-text">Et le plus beau reste à venir…</span></div>
+      </div>
+
+    </div>
+
+    <p class="swipe-hint" aria-hidden="true">balayez pour voir en grand</p>
+
+    <div id="secret-wrap">
+      <div id="secret-msg">
+        <div class="secret-border">
+          <span class="secret-corner sc-top" aria-hidden="true">✦</span>
+          <span class="secret-label">message secret</span>
+          <p class="secret-text">
+            Ces quatre images, c'est moi —<br>
+            dans mes silences et mes éclats,<br>
+            dans mes jours ordinaires devenus précieux.<br>
+            <em>Bienvenue dans mon monde.</em>
+          </p>
+          <p class="secret-sig">— à toi de découvrir le reste ✦</p>
+          <span class="secret-corner sc-bot" aria-hidden="true">✦</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="closing-line" id="closing-line">Ce n'est qu'un aperçu…</p>
+    <p class="closing-sub" id="closing-sub">à toi de découvrir le reste</p>
+  </footer>
+
+  <div id="lightbox" role="dialog" aria-modal="true">
+    <button class="lb-close" id="lb-close" aria-label="Fermer">fermer &nbsp;✕</button>
+    <button class="lb-nav" id="lb-prev" aria-label="Précédent">‹</button>
+    <img id="lb-img" src="" alt="">
+    <button class="lb-nav" id="lb-next" aria-label="Suivant">›</button>
+    <span id="lb-caption"></span>
+    <span id="lb-counter"></span>
+  </div>
+
+  <button id="music-btn" aria-label="Pause / Reprendre la musique">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+  </button>
+  <div id="music-tip" role="tooltip">Pause / Reprendre 🎵</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
